@@ -1,0 +1,22 @@
+{
+  "short_name": "dev2018",
+  "name": "Dec 2018",
+  "description": "Fly through space, collect presents floating in the vaccum, avoid the Grinch Monsters, and reach planet Earth to deliver presents in time for Christmas.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "assets/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "theme_color": "#168db5",
+  "background_color": "#168db5",
+  "orientation": "landscape"
+}
