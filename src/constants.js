@@ -2,15 +2,17 @@
 
 // Color palette. For more info, see /COLOR_PALETTE.md documentation.
 const colors = [
-  ['#58BBDC', '#B6E6F7', '#81D0EA', '#36A6CB', '#168DB5'],  // Primary color.
-  ['#FFD060', '#FFEBB9', '#FFDC88', '#FFC63D', '#FFBB16'],  // Secondary color (1).
-  ['#FF7960', '#FFC4B9', '#FF9A88', '#FF5B3D', '#FF3A16'],  // Secondary color (2).
+  ['#57BFDC', '#B5E8F6', '#80D3EA', '#35A9CA', '#1591B4'],  // Primary color.
+  ['#667EE1', '#BCC8F8', '#8C9FED', '#4661D2', '#2644C0'],  // Secondary color (1).
+  ['#FFCF60', '#FFEAB9', '#FFDB88', '#FFC53D', '#FFB916'],  // Secondary color (2).
+  ['#FFB060', '#FFDCB9', '#FFC488', '#FF9F3D', '#FF8C16'],  // Complement color.
 ];
 
 const colors0x = [
-  [0x58BBDC, 0xB6E6F7, 0x81D0EA, 0x36A6CB, 0x168DB5],  // Primary color.
-  [0xFFD060, 0xFFEBB9, 0xFFDC88, 0xFFC63D, 0xFFBB16],  // Secondary color (1).
-  [0xFF7960, 0xFFC4B9, 0xFF9A88, 0xFF5B3D, 0xFF3A16],  // Secondary color (2).
+  [0x57BFDC, 0xB5E8F6, 0x80D3EA, 0x35A9CA, 0x1591B4],  // Primary color.
+  [0x667EE1, 0xBCC8F8, 0x8C9FED, 0x4661D2, 0x2644C0],  // Secondary color (1).
+  [0xFFCF60, 0xFFEAB9, 0xFFDB88, 0xFFC53D, 0xFFB916],  // Secondary color (2).
+  [0xFFB060, 0xFFDCB9, 0xFFC488, 0xFF9F3D, 0xFF8C16],  // Complement color.
 ];
 
 const debug = (localStorage['debug'] === 'true') ? true : false;
