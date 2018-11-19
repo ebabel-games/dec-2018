@@ -1,7 +1,5 @@
 'use strict';
 
-import * as C from '../constants';
-
 /**
  * `PlayGame`
  * Main Phaser scene to play the game.
