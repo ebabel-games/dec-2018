@@ -32,7 +32,7 @@ window.addEventListener('load', () => {
           y: 0,
           width: 367,
           height: 2000,
-          thickness: 32
+          thickness: 32,
         },
         debug: C.debug,
       },

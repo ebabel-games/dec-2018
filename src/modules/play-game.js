@@ -11,6 +11,7 @@ class PlayGame extends Phaser.Scene {
     this.EG = {
       cursors: null,
       firstPlay: true,
+      player: null,
     };
   }
 
@@ -36,11 +37,25 @@ class PlayGame extends Phaser.Scene {
 
     this.createStarfield();
 
-    this.cursors = this.input.keyboard.createCursorKeys();
+    this.EG.player = this.impact.add.sprite(183.5, 600, 'ship').setDepth(1);
+    this.EG.player.setMaxVelocity(1000).setFriction(800, 600).setPassiveCollision();
+
+    this.EG.cursors = this.input.keyboard.createCursorKeys();
   }
 
   // Game loop function that gets called continuously unless a game over.
   update() {
+    if (this.EG.cursors.up.isDown)
+    {
+      this.EG.player.setAccelerationY(-50);
+    } else {
+      this.EG.player.setAccelerationX(0);
+    }
+
+    //  Position the center of the camera on the player
+    //  We set -333.5 because the camera height is 667px and
+    //  we want the center of the camera on the player.
+    this.cameras.main.scrollY = this.EG.player.y - 333.5;
   }
 }
 
