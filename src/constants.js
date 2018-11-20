@@ -2,6 +2,7 @@
 
 // Color palette. For more info, see /COLOR_PALETTE.md documentation.
 const colors = [
+  ['#EFEFFF', '#CCCCEC', '#8888A8', '#444464', '#000020'],  // White to black scale with a hint of blue hue.
   ['#57BFDC', '#B5E8F6', '#80D3EA', '#35A9CA', '#1591B4'],  // Primary color.
   ['#667EE1', '#BCC8F8', '#8C9FED', '#4661D2', '#2644C0'],  // Secondary color (1).
   ['#FFCF60', '#FFEAB9', '#FFDB88', '#FFC53D', '#FFB916'],  // Secondary color (2).
@@ -9,6 +10,7 @@ const colors = [
 ];
 
 const colors0x = [
+  [0xEFEFFF, 0xCCCCEC, 0x8888A8, 0x444464, 0x000020],  // White to black scale with a hint of blue hue.
   [0x57BFDC, 0xB5E8F6, 0x80D3EA, 0x35A9CA, 0x1591B4],  // Primary color.
   [0x667EE1, 0xBCC8F8, 0x8C9FED, 0x4661D2, 0x2644C0],  // Secondary color (1).
   [0xFFCF60, 0xFFEAB9, 0xFFDB88, 0xFFC53D, 0xFFB916],  // Secondary color (2).

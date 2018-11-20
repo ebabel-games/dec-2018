@@ -23,11 +23,17 @@ window.addEventListener('load', () => {
     type: Phaser.AUTO,
     width: C.gameWidth,
     height: C.gameHeight,
-    backgroundColor: C.colors0x[1][0],
+    backgroundColor: C.colors0x[0][4],
     physics: {
-      default: 'arcade',
-      arcade: {
-        gravity: { y: C.gravity },
+      default: 'impact',
+      impact: {
+        setBounds: {
+          x: 0,
+          y: 0,
+          width: 367,
+          height: 2000,
+          thickness: 32
+        },
         debug: C.debug,
       },
     },
