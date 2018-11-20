@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="667" width="375" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 667.00001" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs>
+  <linearGradient id="a" y2="333.5" gradientUnits="userSpaceOnUse" x2="375" y1="333.5" x1="-.0000064969">
+   <stop stop-color="#35a9ca" offset="0"/>
+   <stop stop-color="#1591b4" offset=".5"/>
+   <stop stop-color="#35a9ca" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <rect height="665.42" width="373.42" stroke="#2f52cd" y=".79083" x=".79083" stroke-width="1.5817" fill="url(#a)"/>
+ </g>
+ <g transform="translate(0 -385.36)" stroke="#2f52cd" stroke-width=".42857" fill="#ffeab9">
+  <circle cx="249" cy="608.03" r="2.2857"/>
+  <circle cy="557.7" cx="259.67" r="2.2857"/>
+  <circle cx="279.33" cy="619.7" r="2.2857"/>
+  <circle cy="681.03" cx="293.33" r="2.2857"/>
+  <g transform="matrix(.59684 -.80236 .80236 .59684 -467.77 204.21)">
+   <circle cy="554.36" cx="92.667" r="2.2857"/>
+   <circle cx="179.33" cy="587.03" r="2.2857"/>
+   <circle cx="130.67" cy="621.7" r="2.2857"/>
+   <circle cy="669.03" cx="218.33" r="2.2857"/>
+   <circle cx="131" cy="701.03" r="2.2857"/>
+   <circle cy="689.03" cx="182.67" r="2.2857"/>
+   <circle cx="164.67" cy="659.03" r="2.2857"/>
+   <circle cy="627.03" cx="78.667" r="2.2857"/>
+  </g>
+  <circle cy="717.36" cx="69.667" r="2.2857"/>
+  <circle cx="156.33" cy="750.03" r="2.2857"/>
+  <circle cx="107.67" cy="784.7" r="2.2857"/>
+  <circle cy="832.03" cx="195.33" r="2.2857"/>
+  <circle cx="108" cy="864.03" r="2.2857"/>
+  <circle cy="713.7" cx="265.67" r="2.2857"/>
+  <circle cx="226" cy="771.03" r="2.2857"/>
+  <circle cy="720.7" cx="236.67" r="2.2857"/>
+  <circle cx="256.33" cy="782.7" r="2.2857"/>
+  <circle cx="242.67" cy="876.7" r="2.2857"/>
+  <circle cy="844.03" cx="270.33" r="2.2857"/>
+  <circle cy="852.03" cx="159.67" r="2.2857"/>
+  <circle cx="141.67" cy="822.03" r="2.2857"/>
+  <circle cy="790.03" cx="55.667" r="2.2857"/>
+  <g transform="matrix(.17951 -.98376 .98376 .17951 -534.5 716.72)">
+   <circle cx="92.667" cy="554.36" r="2.2857"/>
+   <circle cy="587.03" cx="179.33" r="2.2857"/>
+   <circle cy="621.7" cx="130.67" r="2.2857"/>
+   <circle cx="218.33" cy="669.03" r="2.2857"/>
+   <circle cy="701.03" cx="131" r="2.2857"/>
+   <circle cx="182.67" cy="689.03" r="2.2857"/>
+   <circle cy="659.03" cx="164.67" r="2.2857"/>
+   <circle cx="78.667" cy="627.03" r="2.2857"/>
+  </g>
+  <g transform="translate(-178,-220)">
+   <circle cx="265.67" cy="713.7" r="2.2857"/>
+   <circle cy="771.03" cx="226" r="2.2857"/>
+   <circle cx="236.67" cy="720.7" r="2.2857"/>
+   <circle cy="782.7" cx="256.33" r="2.2857"/>
+   <circle cy="876.7" cx="242.67" r="2.2857"/>
+   <circle cx="270.33" cy="844.03" r="2.2857"/>
+  </g>
+  <g transform="matrix(.74632 -.66558 .66558 .74632 -491.31 185.9)">
+   <circle cy="713.7" cx="265.67" r="2.2857"/>
+   <circle cx="226" cy="771.03" r="2.2857"/>
+   <circle cy="720.7" cx="236.67" r="2.2857"/>
+   <circle cx="256.33" cy="782.7" r="2.2857"/>
+   <circle cx="242.67" cy="876.7" r="2.2857"/>
+   <circle cy="844.03" cx="270.33" r="2.2857"/>
+  </g>
+  <g transform="matrix(.61616 -.78762 .78762 .61616 -305.29 692.99)">
+   <circle cy="554.36" cx="92.667" r="2.2857"/>
+   <circle cx="179.33" cy="587.03" r="2.2857"/>
+   <circle cx="130.67" cy="621.7" r="2.2857"/>
+   <circle cy="669.03" cx="218.33" r="2.2857"/>
+   <circle cx="131" cy="701.03" r="2.2857"/>
+   <circle cy="689.03" cx="182.67" r="2.2857"/>
+   <circle cx="164.67" cy="659.03" r="2.2857"/>
+   <circle cy="627.03" cx="78.667" r="2.2857"/>
+  </g>
+  <g transform="matrix(-.98386 -.17894 .17894 -.98386 112.2 1595.5)">
+   <circle cx="92.667" cy="554.36" r="2.2857"/>
+   <circle cy="587.03" cx="179.33" r="2.2857"/>
+   <circle cy="621.7" cx="130.67" r="2.2857"/>
+   <circle cx="218.33" cy="669.03" r="2.2857"/>
+   <circle cy="701.03" cx="131" r="2.2857"/>
+   <circle cx="182.67" cy="689.03" r="2.2857"/>
+   <circle cy="659.03" cx="164.67" r="2.2857"/>
+   <circle cx="78.667" cy="627.03" r="2.2857"/>
+  </g>
+  <g transform="matrix(-.95214 -.30566 .30566 -.95214 320.39 1656.2)">
+   <circle cy="713.7" cx="265.67" r="2.2857"/>
+   <circle cx="226" cy="771.03" r="2.2857"/>
+   <circle cy="720.7" cx="236.67" r="2.2857"/>
+   <circle cx="256.33" cy="782.7" r="2.2857"/>
+   <circle cx="242.67" cy="876.7" r="2.2857"/>
+   <circle cy="844.03" cx="270.33" r="2.2857"/>
+  </g>
+  <g transform="matrix(-.70855 .70566 -.70566 -.70855 1041.7 850.04)">
+   <circle cx="265.67" cy="713.7" r="2.2857"/>
+   <circle cy="771.03" cx="226" r="2.2857"/>
+   <circle cx="236.67" cy="720.7" r="2.2857"/>
+   <circle cy="782.7" cx="256.33" r="2.2857"/>
+   <circle cy="876.7" cx="242.67" r="2.2857"/>
+   <circle cx="270.33" cy="844.03" r="2.2857"/>
+  </g>
+  <g transform="matrix(.17951 -.98376 .98376 .17951 -534.5 716.72)">
+   <circle cy="554.36" cx="92.667" r="2.2857"/>
+   <circle cx="179.33" cy="587.03" r="2.2857"/>
+   <circle cx="130.67" cy="621.7" r="2.2857"/>
+   <circle cy="669.03" cx="218.33" r="2.2857"/>
+   <circle cx="131" cy="701.03" r="2.2857"/>
+   <circle cy="689.03" cx="182.67" r="2.2857"/>
+   <circle cx="164.67" cy="659.03" r="2.2857"/>
+   <circle cy="627.03" cx="78.667" r="2.2857"/>
+  </g>
+  <g transform="matrix(-.83479 -.55056 .55056 -.83479 85.673 1073.2)">
+   <circle cx="92.667" cy="554.36" r="2.2857"/>
+   <circle cy="587.03" cx="179.33" r="2.2857"/>
+   <circle cy="621.7" cx="130.67" r="2.2857"/>
+   <circle cx="218.33" cy="669.03" r="2.2857"/>
+   <circle cy="701.03" cx="131" r="2.2857"/>
+   <circle cx="182.67" cy="689.03" r="2.2857"/>
+   <circle cy="659.03" cx="164.67" r="2.2857"/>
+   <circle cx="78.667" cy="627.03" r="2.2857"/>
+  </g>
+ </g>
+</svg>
