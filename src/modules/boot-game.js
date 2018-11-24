@@ -13,7 +13,7 @@ class BootGame extends Phaser.Scene {
   preload() {
     // Graphics.
     this.load.image('star', 'assets/small-star.svg');
-    this.load.image('big-star', 'assets/phaser-demo/star3.png');
+    this.load.image('big-star', 'assets/big-star.svg');
     this.load.image('ship', 'assets/spaceship.svg');
   }
 

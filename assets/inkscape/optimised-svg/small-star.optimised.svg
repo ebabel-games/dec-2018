@@ -1,23 +1,14 @@
-<svg width="26.445" height="26.445" version="1.1" viewBox="0 0 6.9969 6.9969" xmlns="http://www.w3.org/2000/svg">
+<svg width="10" height="10" version="1.1" viewBox="0 0 2.6458 2.6458" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <filter id="c" x="-.2148" y="-.2148" width="1.4296" height="1.4296" color-interpolation-filters="sRGB">
-   <feGaussianBlur stdDeviation="0.15628937"/>
-  </filter>
-  <filter id="b" x="-.0408" y="-.3264" width="1.0816" height="1.6528" color-interpolation-filters="sRGB">
-   <feGaussianBlur stdDeviation="0.071966663"/>
-  </filter>
-  <filter id="a" x="-.3264" y="-.0408" width="1.6528" height="1.0816" color-interpolation-filters="sRGB">
-   <feGaussianBlur stdDeviation="0.071966663"/>
-  </filter>
-  <filter id="d" x="-.1296" y="-.1296" width="1.2592" height="1.2592" color-interpolation-filters="sRGB">
-   <feGaussianBlur stdDeviation="0.22859999"/>
+  <filter id="a" x="-.0816" y="-.0816" width="1.1632" height="1.1632" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.060779136"/>
   </filter>
  </defs>
- <g transform="translate(.17272 -291.38)">
-  <g transform="translate(1.209 -3.2464e-6)" filter="url(#d)">
-   <rect x="1.1126e-7" y="294.62" width="4.2333" height=".52917" ry=".52917" fill="#ffcf60" filter="url(#b)"/>
-   <rect transform="rotate(90)" x="292.77" y="-2.3812" width="4.2333" height=".52917" ry=".52917" fill="#ffcf60" filter="url(#a)"/>
-   <circle cx="2.1167" cy="294.88" r=".87312" fill="#ffeab9" filter="url(#c)"/>
+ <g transform="translate(-145.93 -104.58)">
+  <g transform="matrix(1.0074 0 0 1.0074 148.95 -188.48)">
+   <path d="m-1.6873 290.9c0.082669 1.1259 0.20681 1.2616 1.3132 1.3132-1.1289 0.14029-1.2351 0.15746-1.3132 1.3132-0.048042-1.153-0.13576-1.2236-1.3132-1.3132 1.1696-0.0588 1.2755-0.17887 1.3132-1.3132z" fill="#1591b4"/>
+   <path d="m-1.6873 291.32c0.056269 0.76634 0.14077 0.85875 0.89381 0.89381-0.76838 0.0955-0.84072 0.10717-0.89381 0.89381-0.032701-0.78476-0.092405-0.83284-0.89381-0.89381 0.79611-0.04 0.86817-0.12175 0.89381-0.89381z" fill="#8c9fed" filter="url(#a)"/>
+   <path d="m-1.6873 291.72c0.030499 0.41536 0.076298 0.46545 0.48446 0.48446-0.41647 0.0518-0.45568 0.0581-0.48446 0.48446-0.017724-0.42534-0.050085-0.4514-0.48446-0.48446 0.4315-0.0217 0.47056-0.066 0.48446-0.48446z" fill="#b5e8f6"/>
   </g>
  </g>
 </svg>
