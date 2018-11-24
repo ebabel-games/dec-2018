@@ -19,8 +19,9 @@ class PlayGame extends Phaser.Scene {
   // Note: the scrollFactor values create the 'parallax' effect.
   // Source: http://labs.phaser.io/edit.html?src=src\games\defenda\test.js
   createStarfield () {
-    const group = this.add.group({ key: 'star', frameQuantity: 256 });
-    group.createMultiple({ key: 'big-star', frameQuantity: 32 });
+    const group = this.add.group({ key: 'star', frameQuantity: 128 });
+    group.createMultiple({ key: 'big-star', frameQuantity: 16 });
+    group.createMultiple({ key: 'edwina-star', frameQuantity: 16 });
 
     const rect = new Phaser.Geom.Rectangle(0, 0, 367, 2000);
     Phaser.Actions.RandomRectangle(group.getChildren(), rect);
@@ -28,6 +29,7 @@ class PlayGame extends Phaser.Scene {
     group.children.iterate((child) => {
       let sf = Math.max(0.3, Math.random());
       if (child.texture.key === 'big-star') sf = 0.2;
+      if (child.texture.key === 'edwina-star') sf = 0.3;
       child.setScrollFactor(sf);
     }, this);
   }

@@ -15,6 +15,11 @@ class BootGame extends Phaser.Scene {
     this.load.image('star', 'assets/small-star.svg');
     this.load.image('big-star', 'assets/big-star.svg');
     this.load.image('ship', 'assets/spaceship.svg');
+    this.load.spritesheet(
+      'edwina-star',
+      'assets/edwina-star.svg',
+      { frameWidth: 32, frameHeight: 32 },
+    );
   }
 
   // Phaser function, here used to activate the play button once the preload has completed its work.
