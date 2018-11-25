@@ -1,5 +1,7 @@
 'use strict';
 
+import * as C from '../constants';
+
 /**
  * `PlayGame`
  * Main Phaser scene to play the game.
@@ -20,11 +22,11 @@ class PlayGame extends Phaser.Scene {
   // Note: the scrollFactor values create the 'parallax' effect.
   // Source: http://labs.phaser.io/edit.html?src=src\games\defenda\test.js
   createStarfield () {
-    this.EG.starfield = this.add.group({ key: 'star', frameQuantity: 128 });
-    this.EG.starfield.createMultiple({ key: 'big-star', frameQuantity: 16 });
-    this.EG.starfield.createMultiple({ key: 'edwina-star', frameQuantity: 16 });
+    this.EG.starfield = this.add.group({ key: 'star', frameQuantity: 1280 });
+    this.EG.starfield.createMultiple({ key: 'big-star', frameQuantity: 160 });
+    this.EG.starfield.createMultiple({ key: 'edwina-star', frameQuantity: 160 });
 
-    const rect = new Phaser.Geom.Rectangle(0, 0, 367, 2000);
+    const rect = new Phaser.Geom.Rectangle(0, 0, 367, C.worldBoundsHeight);
     Phaser.Actions.RandomRectangle(this.EG.starfield.getChildren(), rect);
 
     this.EG.starfield.children.iterate((child) => {
@@ -36,7 +38,7 @@ class PlayGame extends Phaser.Scene {
   }
 
   create() {
-    this.cameras.main.setBounds(0, 0, 367, 2000);
+    this.cameras.main.setBounds(0, 0, 367, C.worldBoundsHeight);
 
     this.createStarfield();
 
@@ -52,7 +54,7 @@ class PlayGame extends Phaser.Scene {
       repeat: -1,
     });
 
-    this.EG.player = this.impact.add.sprite(183.5, 600, 'ship').setDepth(1);
+    this.EG.player = this.impact.add.sprite(183.5, C.worldBoundsHeight - 300, 'ship').setDepth(1);
     this.EG.player.setMaxVelocity(1000).setFriction(800, 600).setPassiveCollision();
 
     this.EG.cursors = this.input.keyboard.createCursorKeys();
