@@ -56,7 +56,19 @@ class PlayGame extends Phaser.Scene {
           frames: [0, 1, 2],
         }
       ),
-      frameRate: 6,
+      frameRate: 3,
+      repeat: -1,
+    });
+
+    this.anims.create({
+      key: 'twinkle2',
+      frames: this.anims.generateFrameNames(
+        'edwina-star',
+        {
+          frames: [1, 0, 2],
+        }
+      ),
+      frameRate: 2,
       repeat: -1,
     });
 
@@ -91,7 +103,13 @@ class PlayGame extends Phaser.Scene {
 
     this.EG.starfield.children.entries
       .filter(child => child.texture.key === 'edwina-star')
-      .map(edwinaStar => edwinaStar.anims.play('twinkle', true));
+      .map((edwinaStar, index) => {
+        if (index % 2 === 0) { 
+          edwinaStar.anims.play('twinkle', true);
+        } else {
+          edwinaStar.anims.play('twinkle2', true);
+        }
+      });
   }
 }
 
