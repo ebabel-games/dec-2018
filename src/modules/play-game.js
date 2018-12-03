@@ -30,7 +30,7 @@ class PlayGame extends Phaser.Scene {
   createStarfield () {
     this.EG.starfield = this.add.group({ key: 'star', frameQuantity: 1280 });
     this.EG.starfield.createMultiple({ key: 'big-star', frameQuantity: 160 });
-    this.EG.starfield.createMultiple({ key: 'edwina-star', frameQuantity: 160 });
+    this.EG.starfield.createMultiple({ key: 'edwina-star', frameQuantity: 9 });
 
     const rect = new Phaser.Geom.Rectangle(0, 0, C.worldBoundsWidth, C.worldBoundsHeight);
     Phaser.Actions.RandomRectangle(this.EG.starfield.getChildren(), rect);
