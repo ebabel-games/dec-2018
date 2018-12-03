@@ -22,7 +22,7 @@ class PlayGame extends Phaser.Scene {
   createStarfield () {
     this.EG.starfield = this.add.group({ key: 'star', frameQuantity: 128 });
     this.EG.starfield.createMultiple({ key: 'big-star', frameQuantity: 16 });
-    this.EG.starfield.createMultiple({ key: 'edwina-star', frameQuantity: 16 });
+    this.EG.starfield.createMultiple({ key: 'edwina-star', frameQuantity: 24 });
 
     const rect = new Phaser.Geom.Rectangle(0, 0, 367, 2000);
     Phaser.Actions.RandomRectangle(this.EG.starfield.getChildren(), rect);
@@ -48,9 +48,22 @@ class PlayGame extends Phaser.Scene {
           frames: [0, 1, 2],
         }
       ),
-      frameRate: 6,
+      frameRate: 3,
       repeat: -1,
     });
+
+    this.anims.create({
+      key: 'twinkle2',
+      frames: this.anims.generateFrameNames(
+        'edwina-star',
+        {
+          frames: [1, 0, 2],
+        }
+      ),
+      frameRate: 2,
+      repeat: -1,
+    });
+
 
     this.EG.player = this.impact.add.sprite(183.5, 600, 'ship').setDepth(1);
     this.EG.player.setMaxVelocity(1000).setFriction(800, 600).setPassiveCollision();
@@ -69,7 +82,13 @@ class PlayGame extends Phaser.Scene {
 
     this.EG.starfield.children.entries
       .filter(child => child.texture.key === 'edwina-star')
-      .map(edwinaStar => edwinaStar.anims.play('twinkle', true));
+      .map((edwinaStar, index) => {
+        if (index % 2 === 0) { 
+          edwinaStar.anims.play('twinkle', true);
+        } else {
+          edwinaStar.anims.play('twinkle2', true);
+        }
+      });
 
     //  Position the center of the camera on the player
     //  We set -333.5 because the camera height is 667px and
