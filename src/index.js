@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
           x: 0,
           y: 0,
           width: 367,
-          height: 2000,
+          height: C.worldBoundsHeight,
           thickness: 32,
         },
         debug: C.debug,
