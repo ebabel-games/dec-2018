@@ -21,6 +21,7 @@ class PlayGame extends Phaser.Scene {
         y: C.gameHeight / 2,
       },
       speed: C.speedDefault,
+      speedDisplay: null,
       countdown: 30,
       countdowEvent: null,
       countdownDisplay: null,
@@ -97,6 +98,18 @@ class PlayGame extends Phaser.Scene {
     );
     this.EG.countdownDisplay.setScrollFactor(0);
 
+    this.EG.speedDisplay = this.add.text(
+      120,
+      620,
+      `Speed: ${this.EG.speed}`,
+      {
+        fontFamily: 'monospace',
+        fontSize: '24px',
+        fill: C.colors[0][0],
+      },
+    );
+    this.EG.speedDisplay.setScrollFactor(0);
+
     this.EG.cursors = this.input.keyboard.createCursorKeys();
 
     const handleCountdown = () => {
@@ -115,6 +128,10 @@ class PlayGame extends Phaser.Scene {
   // Game loop function that gets called continuously unless a game over.
   update() {
     if (this.EG.player.y < this.EG.endPoint) {
+      this.EG.speed = 0;
+      this.EG.player.setAccelerationY(this.EG.speed);
+      this.EG.speedDisplay.setText(`Speed: ${this.EG.speed}`);
+
       // Player has reached the end point of the race, so stop the game.
       this.scene.pause();
     } else {
