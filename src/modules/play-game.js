@@ -99,8 +99,8 @@ class PlayGame extends Phaser.Scene {
     this.EG.countdownDisplay.setScrollFactor(0);
 
     this.EG.speedDisplay = this.add.text(
-      120,
-      620,
+      220,
+      13,
       `Speed: ${this.EG.speed}`,
       {
         fontFamily: 'monospace',
