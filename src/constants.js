@@ -44,4 +44,6 @@ module.exports = {
   // so the camera can move to new areas beyond the initial screen area.
   worldBoundsWidth: 375,
   worldBoundsHeight: 20000,
+
+  speedDefault: 50,
 };

@@ -20,7 +20,10 @@ class PlayGame extends Phaser.Scene {
         x: C.gameWidth / 2,
         y: C.gameHeight / 2,
       },
-      speed: 50,
+      speed: C.speedDefault,
+      countdown: 30,
+      countdowEvent: null,
+      countdownDisplay: null,
     };
   }
 
@@ -79,7 +82,34 @@ class PlayGame extends Phaser.Scene {
     ).setDepth(1);
     this.EG.player.setMaxVelocity(1000).setFriction(C.gameWidth, C.gameHeight).setPassiveCollision();
 
+    const formatCountdown = (t) =>
+      `00:${String(t).padStart(2, '0')}`;
+
+    this.EG.countdownDisplay = this.add.text(
+      10,
+      10,
+      formatCountdown(this.EG.countdown),
+      {
+        fontFamily: 'monospace',
+        fontSize: '32px',
+        fill: C.colors[0][0],
+      },
+    );
+    this.EG.countdownDisplay.setScrollFactor(0);
+
     this.EG.cursors = this.input.keyboard.createCursorKeys();
+
+    const handleCountdown = () => {
+      this.EG.countdown = (this.EG.countdown > 0) ? this.EG.countdown - 1 : 0;
+      this.EG.countdownDisplay.setText(formatCountdown(this.EG.countdown));
+    };
+
+    this.EG.countdowEvent = this.time.addEvent({
+      delay: 1000,
+      callback: handleCountdown,
+      callbackScope: this,
+      repeat: 30,
+    });
   }
 
   // Game loop function that gets called continuously unless a game over.
