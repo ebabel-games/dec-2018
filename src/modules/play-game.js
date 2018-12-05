@@ -25,6 +25,7 @@ class PlayGame extends Phaser.Scene {
       countdown: 30,
       countdowEvent: null,
       countdownDisplay: null,
+      planetEarth: null,
     };
   }
 
@@ -51,6 +52,8 @@ class PlayGame extends Phaser.Scene {
     this.cameras.main.setBounds(0, 0, C.worldBoundsWidth, C.worldBoundsHeight);
 
     this.createStarfield();
+
+    this.add.image(C.gameWidth / 2, 180, 'planet-earth');
 
     this.anims.create({
       key: 'twinkle',
@@ -127,7 +130,7 @@ class PlayGame extends Phaser.Scene {
 
   // Game loop function that gets called continuously unless a game over.
   update() {
-    if (this.EG.player.y < this.EG.endPoint) {
+    if (this.EG.player.y < this.EG.endPoint || this.EG.countdown <= 0) {
       this.EG.speed = 0;
       this.EG.player.setAccelerationY(this.EG.speed);
       this.EG.speedDisplay.setText(`Speed: ${this.EG.speed}`);

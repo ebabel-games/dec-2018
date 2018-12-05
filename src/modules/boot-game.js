@@ -15,6 +15,7 @@ class BootGame extends Phaser.Scene {
     this.load.image('star', 'assets/small-star.svg');
     this.load.image('big-star', 'assets/big-star.svg');
     this.load.image('ship', 'assets/spaceship.svg');
+    this.load.image('planet-earth', 'assets/planet-earth.svg');
     this.load.spritesheet(
       'edwina-star',
       'assets/edwina-star.svg',
