@@ -68,5 +68,9 @@ v8-compile-cache-0
 build/
 /npm-debug.log
 
+# Inkscape
+._*.png
+._*.svg
+
 # Firebase cache
 .firebase/

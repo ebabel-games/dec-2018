@@ -45,5 +45,26 @@ module.exports = {
   worldBoundsWidth: 375,
   worldBoundsHeight: 20000,
 
-  speedDefault: 20,
+  speedDefault: 50,
+
+  playerKey: 'ship',
+  playerAnimations: {
+    left: {
+      key: 'left',
+      frames: [1],
+      frameRate: 10,
+      repeat: 0,
+    },
+    straight: {
+      key: 'straight',
+      frame: 0,
+      frameRate: 20,
+    },
+    right: {
+      key: 'right',
+      frames: [1],
+      frameRate: 10,
+      repeat: 0,
+    },
+  },
 };

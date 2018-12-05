@@ -79,10 +79,43 @@ class PlayGame extends Phaser.Scene {
       repeat: -1,
     });
 
+    this.anims.create({
+      key: C.playerAnimations.left.key,
+      frames: this.anims.generateFrameNames(
+        C.playerKey,
+        {
+          frames: C.playerAnimations.left.frames,
+        }
+      ),
+      frameRate: C.playerAnimations.left.frameRate,
+      repeat: C.playerAnimations.left.repeat,
+    });
+
+    this.anims.create({
+      key: C.playerAnimations.straight.key,
+      frames: [{
+        key: C.playerKey,
+        frame: C.playerAnimations.straight.frame,
+      }],
+      frameRate: C.playerAnimations.straight.frameRate,
+    });
+
+    this.anims.create({
+      key: C.playerAnimations.right.key,
+      frames: this.anims.generateFrameNames(
+        C.playerKey,
+        {
+          frames: C.playerAnimations.right.frames,
+        }
+      ),
+      frameRate: C.playerAnimations.right.frameRate,
+      repeat: C.playerAnimations.right.repeat,
+    });
+
     this.EG.player = this.impact.add.sprite(
       C.worldBoundsWidth / 2,
       C.worldBoundsHeight - (C.gameHeight / 2),
-      'ship'
+      C.playerKey
     ).setDepth(1);
     this.EG.player.setMaxVelocity(1000).setFriction(C.gameWidth, C.gameHeight).setPassiveCollision();
 
@@ -94,7 +127,7 @@ class PlayGame extends Phaser.Scene {
       10,
       formatCountdown(this.EG.countdown),
       {
-        fontFamily: 'monospace',
+        fontFamily: C.headerFontFamily,
         fontSize: '32px',
         fill: C.colors[0][0],
       },
@@ -102,11 +135,11 @@ class PlayGame extends Phaser.Scene {
     this.EG.countdownDisplay.setScrollFactor(0);
 
     this.EG.speedDisplay = this.add.text(
-      220,
+      250,
       13,
       `Speed: ${this.EG.speed}`,
       {
-        fontFamily: 'monospace',
+        fontFamily: C.headerFontFamily,
         fontSize: '24px',
         fill: C.colors[0][0],
       },
@@ -143,6 +176,19 @@ class PlayGame extends Phaser.Scene {
 
       //  Position the center of the camera on the player.
       this.cameras.main.scrollY = this.EG.player.y - this.EG.viewportCenter.y;
+    }
+
+    if (this.EG.cursors.left.isDown) {
+      this.EG.player.flipX = true;
+      this.EG.player.setVelocityX(-this.EG.speed);
+      this.EG.player.anims.play(C.playerAnimations.left.key, true);
+    } else if (this.EG.cursors.right.isDown) {
+      this.EG.player.flipX = false;
+      this.EG.player.setVelocityX(this.EG.speed);
+      this.EG.player.anims.play(C.playerAnimations.right.key, true);
+    } else {
+      this.EG.player.setVelocityX(0);
+      this.EG.player.anims.play(C.playerAnimations.straight.key, true);
     }
 
     // Pickup a present to increase speed.
