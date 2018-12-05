@@ -67,4 +67,14 @@ module.exports = {
       repeat: 0,
     },
   },
+
+  // x and y co-ordinates of all gift boxes.
+  giftBoxes: [
+    [100, 3000],
+    [200, 6000],
+    [300, 9000],
+    [200, 12000],
+    [100, 16000],
+    [200, 19000],
+  ],
 };

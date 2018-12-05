@@ -49,18 +49,15 @@ class PlayGame extends Phaser.Scene {
     }, this);
   }
 
-  createGiftBoxes() {
-    this.EG.giftBoxes = this.add.group({key: 'gift-box', frameQuantity: 20});
-    const rect = new Phaser.Geom.Rectangle(100, 500, C.worldBoundsWidth - 100, C.worldBoundsHeight - 400);
-    Phaser.Actions.RandomRectangle(this.EG.giftBoxes.getChildren(), rect);
-  }
-
   create() {
     this.cameras.main.setBounds(0, 0, C.worldBoundsWidth, C.worldBoundsHeight);
 
     this.createStarfield();
 
-    this.createGiftBoxes();
+    this.EG.giftBoxes = this.add.group();
+    C.giftBoxes.map((giftBox) => {
+      this.EG.giftBoxes.create(giftBox[0], giftBox[1], 'gift-box');
+    });
 
     this.add.image(C.gameWidth / 2, 180, 'planet-earth');
 
@@ -125,7 +122,7 @@ class PlayGame extends Phaser.Scene {
       this.EG.cursors.right.isDown = (this.EG.player.x < pointer.x);
       this.EG.cursors.left.isDown = (this.EG.player.x > pointer.x);
     });
-    this.input.on('pointerup', (pointer) => {
+    this.input.on('pointerup', () => {
       this.EG.cursors.right.isDown = false;
       this.EG.cursors.left.isDown = false;
     });
