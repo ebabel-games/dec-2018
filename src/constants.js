@@ -45,5 +45,5 @@ module.exports = {
   worldBoundsWidth: 375,
   worldBoundsHeight: 20000,
 
-  speedDefault: 50,
+  speedDefault: 25,
 };
