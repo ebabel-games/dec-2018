@@ -26,16 +26,17 @@ class PlayGame extends Phaser.Scene {
       countdowEvent: null,
       countdownDisplay: null,
       planetEarth: null,
+      giftBoxes: null,
     };
   }
 
   // Starfield background.
   // Note: the scrollFactor values create the 'parallax' effect.
   // Source: http://labs.phaser.io/edit.html?src=src\games\defenda\test.js
-  createStarfield () {
-    this.EG.starfield = this.add.group({ key: 'star', frameQuantity: 1280 });
-    this.EG.starfield.createMultiple({ key: 'big-star', frameQuantity: 160 });
-    this.EG.starfield.createMultiple({ key: 'edwina-star', frameQuantity: 9 });
+  createStarfield() {
+    this.EG.starfield = this.add.group({key: 'star', frameQuantity: 1280});
+    this.EG.starfield.createMultiple({key: 'big-star', frameQuantity: 160});
+    this.EG.starfield.createMultiple({key: 'edwina-star', frameQuantity: 9});
 
     const rect = new Phaser.Geom.Rectangle(0, 0, C.worldBoundsWidth, C.worldBoundsHeight);
     Phaser.Actions.RandomRectangle(this.EG.starfield.getChildren(), rect);
@@ -48,10 +49,18 @@ class PlayGame extends Phaser.Scene {
     }, this);
   }
 
+  createGiftBoxes() {
+    this.EG.giftBoxes = this.add.group({key: 'gift-box', frameQuantity: 20});
+    const rect = new Phaser.Geom.Rectangle(100, 500, C.worldBoundsWidth - 100, C.worldBoundsHeight - 400);
+    Phaser.Actions.RandomRectangle(this.EG.giftBoxes.getChildren(), rect);
+  }
+
   create() {
     this.cameras.main.setBounds(0, 0, C.worldBoundsWidth, C.worldBoundsHeight);
 
     this.createStarfield();
+
+    this.createGiftBoxes();
 
     this.add.image(C.gameWidth / 2, 180, 'planet-earth');
 
@@ -110,6 +119,15 @@ class PlayGame extends Phaser.Scene {
       ),
       frameRate: C.playerAnimations.right.frameRate,
       repeat: C.playerAnimations.right.repeat,
+    });
+
+    this.input.on('pointerdown', (pointer) => {
+      this.EG.cursors.right.isDown = (this.EG.player.x < pointer.x);
+      this.EG.cursors.left.isDown = (this.EG.player.x > pointer.x);
+    });
+    this.input.on('pointerup', (pointer) => {
+      this.EG.cursors.right.isDown = false;
+      this.EG.cursors.left.isDown = false;
     });
 
     this.EG.player = this.impact.add.sprite(
