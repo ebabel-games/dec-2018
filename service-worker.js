@@ -16,6 +16,12 @@ const immutableRequests = [
   'favicon.ico',
   'robots.txt',
   'https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser.min.js',
+  'assets/big-star.svg',
+  'assets/edwina-star.svg',
+  'assets/gift-box.svg',
+  'assets/planet-earth.svg',
+  'assets/small-star.svg',
+  'assets/spaceship.png',
 ];
 
 // Once a service worker has successfully installed, it enters the "installed" state.
