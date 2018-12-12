@@ -129,7 +129,7 @@ class PlayGame extends Phaser.Scene {
 
     this.EG.player = this.impact.add.sprite(
       C.worldBoundsWidth / 2,
-      C.worldBoundsHeight - (C.gameHeight / 2),
+      C.worldBoundsHeight - C.playerDistanceFromBottomEdge,
       C.playerKey
     ).setDepth(1);
     this.EG.player.setMaxVelocity(1000).setFriction(C.gameWidth, C.gameHeight).setPassiveCollision();

@@ -48,6 +48,7 @@ module.exports = {
   speedDefault: 50,
 
   playerKey: 'ship',
+  playerDistanceFromBottomEdge: 50,
   playerAnimations: {
     left: {
       key: 'left',
