@@ -27,6 +27,8 @@ class PlayGame extends Phaser.Scene {
       countdownDisplay: null,
       planetEarth: null,
       giftBoxes: null,
+      leftMoveButton: null,
+      rightMoveButton: null,
     };
   }
 
@@ -35,8 +37,8 @@ class PlayGame extends Phaser.Scene {
   // Source: http://labs.phaser.io/edit.html?src=src\games\defenda\test.js
   createStarfield() {
     this.EG.starfield = this.add.group({key: 'star', frameQuantity: 1280});
-    this.EG.starfield.createMultiple({key: 'big-star', frameQuantity: 160});
-    this.EG.starfield.createMultiple({key: 'edwina-star', frameQuantity: 9});
+    this.EG.starfield.createMultiple({key: 'big-star', frameQuantity: 140});
+    this.EG.starfield.createMultiple({key: 'edwina-star', frameQuantity: 20});
 
     const rect = new Phaser.Geom.Rectangle(0, 0, C.worldBoundsWidth, C.worldBoundsHeight);
     Phaser.Actions.RandomRectangle(this.EG.starfield.getChildren(), rect);
@@ -60,6 +62,13 @@ class PlayGame extends Phaser.Scene {
     });
 
     this.add.image(C.gameWidth / 2, 180, 'planet-earth');
+
+    this.EG.leftMoveButton = this.add.image(55, C.gameHeight - 55, 'move-button');
+    this.EG.leftMoveButton.setScrollFactor(0);
+    this.EG.leftMoveButton.flipX = true;
+
+    this.EG.rightMoveButton = this.add.image(C.gameWidth - 55, C.gameHeight - 55, 'move-button');
+    this.EG.rightMoveButton.setScrollFactor(0);
 
     this.anims.create({
       key: 'twinkle',
