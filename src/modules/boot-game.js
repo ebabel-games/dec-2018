@@ -24,6 +24,7 @@ class BootGame extends Phaser.Scene {
     );
 
     this.load.image('planet-earth', 'assets/planet-earth.svg');
+    this.load.image('move-button', 'assets/move-button.svg');
 
     this.load.spritesheet(
       'edwina-star',
